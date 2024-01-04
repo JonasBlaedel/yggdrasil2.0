@@ -188,7 +188,7 @@ function Booking() {
   )}`;
 
   return (
-    <div className="min-h-full divide-x divide-accent lg:grid lg:grid-cols-[1fr_0.4fr]">
+    <div className="min-h-full divide-x divide-accent  overflow-x-hidden lg:grid lg:grid-cols-[1fr_0.4fr]">
       {showTimeUpModal && (
         <div className="fixed inset-0 z-[999] flex items-center justify-center">
           <div className="rounded bg-foreground-light p-8 shadow-lg">

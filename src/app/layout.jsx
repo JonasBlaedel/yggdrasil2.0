@@ -11,15 +11,21 @@ export default function RootLayout({ children }) {
     <html lang="en" className="h-full w-full">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1"
+        ></meta>
       </head>
       <body className="mx-4 grid h-full grid-rows-[auto_1fr_auto] overflow-x-hidden bg-background-light font-body md:mx-24">
-        <header>
-          <NavBar />
-        </header>
-        <main>{children}</main>
-        <footer>
-          <Footer />
-        </footer>
+
+          <header>
+            <NavBar />
+          </header>
+          <main>{children}</main>
+          <footer>
+            <Footer />
+          </footer>
+
       </body>
     </html>
   );

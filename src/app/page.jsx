@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <section className="mx-[-12rem] grid items-center text-center text-text-dark">
+      <section className="md:mx-[-12rem] grid items-center text-center text-text-dark">
         <Image
           className="blur [grid-area:1/1]"
           priority
