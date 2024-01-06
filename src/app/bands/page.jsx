@@ -8,14 +8,16 @@ async function page() {
   ).then((res) => res.json());
 
   return (
-    <>
-      <h1 className="text-center font-heading text-4xl sm:text-5xl">Acts</h1>
-      <div className="mx-auto my-8 flex flex-col items-center [max-width:1000px]">
+    <div className="">
+      <div className=" mx-auto my-4 flex flex-col items-center [max-width:1000px]">
+        <h1 className=" z-40 mb-8 text-center font-heading text-4xl sm:text-5xl">
+          Acts
+        </h1>
         <TopBands bands={bands} />
         <MidBands bands={bands} />
         <SmallBands bands={bands} />
       </div>
-    </>
+    </div>
   );
 }
 
