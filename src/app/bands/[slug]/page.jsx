@@ -35,7 +35,7 @@ async function BandPage({ params }) {
       <div className="relative mx-[-6rem]">
         <div className=" absolute h-full w-full bg-gradient-to-b from-transparent to-background-light"></div>
         <img
-          className="h-96 w-full bg-contain object-cover"
+          className="h-96 max-w-full bg-contain object-cover"
           src={imagePath}
           alt={`Image of ${band.name}`}
         />
