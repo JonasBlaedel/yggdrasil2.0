@@ -22,29 +22,29 @@ export default function Home() {
         ></Image>
         <div className="z-10 space-y-10 [grid-area:1/1]">
           <div>
-            <h1 className="font-heading text-4xl lg:text-7xl text-text-dark">
+            <h1 className="font-heading text-4xl text-text-dark lg:text-7xl">
               Yggdrasil Music Festival 2024
             </h1>
             <p>Immerse yourself in the Mystic Melodies</p>
           </div>
-          <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
             <Link
-              className="rounded w-52 px-4 py-2 text-xl text-text-dark ring-1 ring-accent duration-300 hover:bg-accent"
+              className="w-52 rounded px-4 py-2 text-xl text-text-dark ring-1 ring-accent duration-300 hover:bg-accent"
               href="/bands"
             >
               LINE-UP
             </Link>
             <Link
-              className="rounded w-52 px-4 py-2 text-xl text-text-dark ring-1 ring-accent duration-300 hover:bg-accent"
-              href="/book"
-            >
-              TICKETS
-            </Link>
-            <Link
-              className="rounded w-52 px-4 py-2 text-xl text-text-dark ring-1 ring-accent duration-300 hover:bg-accent"
+              className="w-52 rounded px-4 py-2 text-xl text-text-dark ring-1 ring-accent duration-300 hover:bg-accent"
               href="/schedule"
             >
               SCHEDULE
+            </Link>
+            <Link
+              className="w-52 rounded px-4 py-2 text-xl text-text-dark ring-1 ring-accent duration-300 hover:bg-accent"
+              href="/book"
+            >
+              TICKETS
             </Link>
           </div>
         </div>
