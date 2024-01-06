@@ -7,9 +7,9 @@ function TopBands(props) {
         <Link key={band.slug} bands={band.bands} href={`/bands/${band.slug}`}>
           <div className="group">
             <div className="pointer-events-none">
-              <div className=" fixed left-0 top-0 z-20 h-full w-full bg-gradient-to-b from-transparent to-background-light opacity-0 transition-opacity duration-700 ease-out group-hover:opacity-100"></div>
+              <div className=" fixed left-0 top-0 z-20 h-full w-full bg-gradient-to-b from-transparent to-background-light opacity-0 transition-opacity duration-700 ease-out sm:group-hover:opacity-100"></div>
               <img
-                className=" fixed left-0 top-0 z-10 h-full w-full bg-contain object-cover opacity-0 grayscale transition-opacity duration-700 ease-in-out group-hover:opacity-50"
+                className=" fixed left-0 top-0 z-10 h-full w-full bg-contain object-cover opacity-0 grayscale transition-opacity duration-700 ease-in-out sm:group-hover:opacity-50"
                 src={`https://funky-melodious-jingle.glitch.me/logos/${band.logo}`}
                 alt="Band img"
               />
