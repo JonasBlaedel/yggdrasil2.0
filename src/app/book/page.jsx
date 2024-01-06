@@ -422,7 +422,7 @@ function Booking() {
                 inputMode="email"
               />
               <InputField
-                type="tel"
+                type="text"
                 inputMode="numeric"
                 id="payer-phone"
                 name="phone"
