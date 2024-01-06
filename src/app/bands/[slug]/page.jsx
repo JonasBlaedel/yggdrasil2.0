@@ -32,20 +32,20 @@ async function BandPage({ params }) {
 
   return (
     <div className="">
-      <div className="relative mx-[-6rem]">
+      <div className="relative  sm:mx-[-6rem]">
         <div className=" absolute h-full w-full bg-gradient-to-b from-transparent to-background-light"></div>
         <img
           className="h-96 w-full bg-contain object-cover"
           src={imagePath}
           alt={`Image of ${band.name}`}
         />
-        <h1 className="absolute left-1/2 top-3/4 font-heading text-3xl uppercase [transform:translate(-50%,-50%);] lg:text-5xl">
+        <h1 className="absolute left-1/2 top-3/4 text-center font-heading text-3xl uppercase [transform:translate(-50%,-50%);] lg:text-5xl">
           {band.name}
         </h1>
       </div>
       <div className="mx-10 mb-10 grid grid-cols-1 gap-4 font-body text-xl sm:gap-0 lg:grid-cols-3">
         <aside className=" grid grid-cols-1 gap-4 sm:flex sm:flex-col">
-          <div className="font-body text-xs">
+          <div className="font-body text-xs ">
             <p>Band Members</p>
             <p className="flex flex-col gap-1 font-body text-base sm:gap-2">
               {band.members.map((member, i) => (
