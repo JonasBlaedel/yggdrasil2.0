@@ -43,7 +43,7 @@ async function BandPage({ params }) {
           {band.name}
         </h1>
       </div>
-      <div className="mx-10 mb-10 grid grid-cols-1 gap-4 font-body text-xl sm:gap-0 lg:grid-cols-3">
+      <div className="mb-10 grid grid-cols-1 gap-4 font-body text-xl sm:mx-10 sm:gap-0 lg:grid-cols-3">
         <aside className=" grid grid-cols-1 gap-4 sm:flex sm:flex-col">
           <div className="font-body text-xs ">
             <p>Band Members</p>
@@ -65,7 +65,7 @@ async function BandPage({ params }) {
           </div>
         </aside>
         <div className="col-span-2">
-          <p>{band.bio}</p>
+          <p className="text-base">{band.bio}</p>
         </div>
       </div>
     </div>
