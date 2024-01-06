@@ -23,7 +23,7 @@ function InputField({
           type={type}
           name={name}
           id={id}
-          inputMode={inputMode}
+          inputmode={inputMode}
           autoComplete={autoComplete}
           maxLength={maxLength}
           required={required}
