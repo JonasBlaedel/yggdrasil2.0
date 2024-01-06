@@ -26,11 +26,12 @@ function AttendeeInput({ tickets }) {
               required="required"
             />
             <InputField
-              type="phone"
+              type="tel"
               id={"attendee-phone" + ticket.id}
               name="phone"
               labelText="Phone"
               required="required"
+              inputMode="numeric"
             />
           </div>
         ))}
