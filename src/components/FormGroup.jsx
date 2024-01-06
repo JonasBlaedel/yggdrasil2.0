@@ -1,7 +1,7 @@
 function FormGroup({ children, headline, classStyle }) {
   return (
     <fieldset className={`${classStyle} mb-10`}>
-      <legend className="text-3xl mb-10 font-heading">{headline}</legend>
+      <legend className="mb-10 w-full font-heading text-3xl text-text-light">{headline}</legend>
       {children}
     </fieldset>
   );

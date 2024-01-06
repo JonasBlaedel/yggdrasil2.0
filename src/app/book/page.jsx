@@ -15,8 +15,11 @@ import BookingButton from "@/components/BookingButton";
 import { intervalToDuration } from "date-fns";
 import TentCard from "@/components/TentCard";
 import Spinner from "@/components/Spinner";
+import { useViewport } from "react-viewport-hooks";
 
 function Booking() {
+  const { vw } = useViewport();
+
   const [campingAreas, setCampingAreas] = useState([]);
   useEffect(() => {
     fetch("https://funky-melodious-jingle.glitch.me/available-spots")
@@ -36,6 +39,13 @@ function Booking() {
       count();
     }
   }, [timeValue]);
+
+  // Bruger useViewport til at sætte basket til altid at vises på viewport size over 1024px
+  useEffect(() => {
+    if (vw > 1024) {
+      setBasketStatus(true);
+    }
+  }, [vw]);
 
   const [showTimeUpModal, setShowTimeUpModal] = useState(false);
 
@@ -188,10 +198,10 @@ function Booking() {
   )}`;
 
   return (
-    <div className="min-h-full divide-x divide-accent  overflow-x-hidden lg:grid lg:grid-cols-[1fr_0.4fr]">
+    <div className="min-h-full  gap-4 lg:grid lg:grid-cols-[1fr_0.4fr] ">
       {showTimeUpModal && (
         <div className="fixed inset-0 z-[999] flex items-center justify-center">
-          <div className="rounded bg-foreground-light p-8 shadow-lg">
+          <div className="rounded bg-foreground-dark p-8 text-text-dark shadow-lg">
             <h2 className="mb-4 text-2xl">Time is up!</h2>
             <p>
               Unfortunately, your tickets are no longer on hold. Please refresh
@@ -390,42 +400,37 @@ function Booking() {
           <>
             <FormGroup headline="Credit card holder information">
               <InputField
-                placeholder="First name"
                 type="text"
                 id="payer-firstname"
                 name="first-name"
                 labelText="First name"
-                required
+                required="required"
               />
               <InputField
-                placeholder="Last name"
                 type="text"
                 id="payer-surname"
                 name="last-name"
                 labelText="Last name"
-                required
+                required="required"
               />
               <InputField
-                placeholder="Email"
                 type="email"
                 id="payer-email"
                 name="email"
                 labelText="Email"
-                required
+                required="required"
               />
               <InputField
-                placeholder="Phone"
                 type="phone"
                 inputMode="numeric"
                 id="payer-phone"
                 name="phone"
                 labelText="Phone"
-                required
+                required="required"
               />
             </FormGroup>
             <FormGroup headline="Payment information">
               <InputField
-                placeholder="Credit / Debit card number"
                 type="text"
                 id="cc-number"
                 name="cc-number"
@@ -433,21 +438,19 @@ function Booking() {
                 autoComplete="cc-number"
                 maxLength="19"
                 labelText="Credit/Debit card number"
-                required
+                required="required"
               />
               <InputField
-                placeholder="MM/YYYY"
                 type="text"
                 id="expiration-date"
                 name="expiration-date"
                 inputMode="numeric"
                 autoComplete="cc-exp"
-                maxLength="7"
+                maxLength="6"
                 labelText="Expiration Date"
-                required
+                required="required"
               />
               <InputField
-                placeholder="123"
                 type="text"
                 id="cvc-number"
                 name="cvc-number"
@@ -455,7 +458,7 @@ function Booking() {
                 autoComplete="cc-csc"
                 maxLength="3"
                 labelText="CVC number"
-                required
+                required="required"
               />
             </FormGroup>
             <BookingButton disabled={isLoading} onClick={loadingFunction}>
@@ -467,7 +470,7 @@ function Booking() {
       <button
         onClick={toggleBasket}
         aria-expanded={basketStatus}
-        className="fixed inset-x-8 bottom-8 z-[2] mx-auto grid h-20 grid-cols-3 place-items-center items-center rounded-full border-2 border-accent bg-background-light bg-opacity-50 px-4 py-4 backdrop-blur-sm lg:hidden"
+        className=" fixed inset-x-8 bottom-8 z-[2] mx-auto grid h-20 grid-cols-3 place-items-center items-center rounded-full border-2 border-accent bg-background-light bg-opacity-50 px-4 py-4 backdrop-blur-sm lg:hidden"
       >
         {basketStatus ? (
           tickets.length > 0 ? (
@@ -508,12 +511,11 @@ function Booking() {
         ) : (
           <>
             <span className="col-start-1"></span>
-            <span className="col-start-2">View Basket </span>
+            <span className="col-start-2">View Basket</span>
             <span className="col-start-3 w-10"></span>
           </>
         )}
       </button>
-
       <TicketBasket basketStatus={basketStatus} showTickets={showTickets}>
         {timeLeft > 0 && <p className="text-xl">{formattedTimeLeft}</p>}
         {tickets.map((ticket) => (

@@ -1,6 +1,15 @@
 import { useState } from "react";
 
-function InputField({ type, name, id, labelText }) {
+function InputField({
+  type,
+  name,
+  id,
+  labelText,
+  inputMode,
+  autoComplete,
+  maxLength,
+  required,
+}) {
   const [isFocused, setFocused] = useState(false);
 
   return (
@@ -14,7 +23,10 @@ function InputField({ type, name, id, labelText }) {
           type={type}
           name={name}
           id={id}
-          required
+          inputMode={inputMode}
+          autoComplete={autoComplete}
+          maxLength={maxLength}
+          required={required}
         />
         <div
           className={

@@ -16,21 +16,21 @@ function AttendeeInput({ tickets }) {
               id={"attendee-name" + ticket.id}
               name="name"
               labelText="Full name"
-              required
+              required="required"
             />
             <InputField
               type="email"
               id={"attendee-email" + ticket.id}
               name="email"
               labelText="Email"
-              required
+              required="required"
             />
             <InputField
               type="phone"
               id={"attendee-phone" + ticket.id}
               name="phone"
               labelText="Phone"
-              required
+              required="required"
             />
           </div>
         ))}

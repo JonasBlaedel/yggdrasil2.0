@@ -28,16 +28,30 @@ function TotalAmount(props) {
   }
 
   return (
-    <div className="grid grid-cols-3 items-center">
-      <p className="grid-start-1">Booking fee </p>
-      <p className="col-start-3">{bookingFee}</p>
-      <span className="col-start-4">DKK</span>
-      <p className="col-start-1 row-start-2">Subtotal</p>
-      <p className="col-start-3 row-start-2">{subtotal}</p>
-      <span className="col-start-4">DKK</span>
-      <p className="col-start-1 row-start-3">Total</p>
-      <p className="col-start-3 row-start-3">{total}</p>
-      <span className="col-start-4">DKK</span>
+    <div className="bg-foreground-dark text-text-dark bg-opacity-80 space-y-2 p-2 rounded mt-4">
+      <div className="grid grid-cols-3 gap-4">
+        <p className="col-span-2 col-start-1">Booking fee</p>
+        <div className="grid grid-cols-3 place-items-end gap-1">
+          <p className="col-start-3">{bookingFee}</p>
+          <span className="col-start-4">DKK</span>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-3 gap-4">
+        <p className="col-span-2 col-start-1">Subtotal</p>
+        <div className="grid grid-cols-3 place-items-end gap-1">
+          <p className="col-start-3">{subtotal}</p>
+          <span className="col-start-4">DKK</span>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-3 gap-4">
+        <p className="col-span-2 col-start-1">Total</p>
+        <div className="grid grid-cols-3 place-items-end gap-1">
+          <p className="col-start-3">{total}</p>
+          <span className="col-start-4">DKK</span>
+        </div>
+      </div>
     </div>
   );
 }

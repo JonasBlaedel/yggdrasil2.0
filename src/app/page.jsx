@@ -4,9 +4,9 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <section className="mx-[-1rem] grid items-center text-center text-text-dark sm:mx-[-12rem]">
+      <section className="mx-[-1rem] grid items-center overflow-x-hidden text-center text-text-dark sm:mx-[-12rem]">
         <Image
-          className="blur [grid-area:1/1]"
+          className=" blur [grid-area:1/1]"
           priority
           quality={30}
           alt="people gathering on concert field"
@@ -22,26 +22,26 @@ export default function Home() {
         ></Image>
         <div className="z-10 space-y-10 [grid-area:1/1]">
           <div>
-            <h1 className="font-heading text-4xl lg:text-7xl">
+            <h1 className="font-heading text-4xl lg:text-7xl text-text-dark">
               Yggdrasil Music Festival 2024
             </h1>
             <p>Immerse yourself in the Mystic Melodies</p>
           </div>
-          <div className="space-x-4">
+          <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
             <Link
-              className="rounded px-4 py-2 text-xl text-text-dark ring-1 ring-accent duration-300 hover:bg-accent"
+              className="rounded w-52 px-4 py-2 text-xl text-text-dark ring-1 ring-accent duration-300 hover:bg-accent"
               href="/bands"
             >
               LINE-UP
             </Link>
             <Link
-              className="rounded px-4 py-2 text-xl text-text-dark ring-1 ring-accent duration-300 hover:bg-accent"
+              className="rounded w-52 px-4 py-2 text-xl text-text-dark ring-1 ring-accent duration-300 hover:bg-accent"
               href="/book"
             >
               TICKETS
             </Link>
             <Link
-              className="rounded px-4 py-2 text-xl text-text-dark ring-1 ring-accent duration-300 hover:bg-accent"
+              className="rounded w-52 px-4 py-2 text-xl text-text-dark ring-1 ring-accent duration-300 hover:bg-accent"
               href="/schedule"
             >
               SCHEDULE

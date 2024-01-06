@@ -10,7 +10,7 @@ function InputCounter({
   const totalValue = value;
 
   return (
-    <div className="space-y-2">
+    <div className="touch-manipulation space-y-2">
       <p className="text-xs">{counterText}</p>
       <div className="flex place-items-center gap-2">
         <button
