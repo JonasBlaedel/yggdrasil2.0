@@ -6,7 +6,7 @@ function AttendeeInput({ tickets }) {
       {tickets
         .filter((ticket) => ticket.ticketType === "Festival Ticket")
         .map((ticket) => (
-          <div key={ticket.id} className="rounded-sm border border-accent p-2">
+          <div key={ticket.id} className="rounded-sm border border-accent p-2 space-y-2">
             <div className="mb-2 flex justify-between gap-10">
               <p>#{ticket.id + 1}</p>
               <p>{ticket.ticketName}</p>
