@@ -419,9 +419,10 @@ function Booking() {
                 name="email"
                 labelText="Email"
                 required="required"
+                inputMode="email"
               />
               <InputField
-                type="phone"
+                type="tel"
                 inputMode="numeric"
                 id="payer-phone"
                 name="phone"

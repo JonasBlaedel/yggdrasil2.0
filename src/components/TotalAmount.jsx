@@ -28,7 +28,7 @@ function TotalAmount(props) {
   }
 
   return (
-    <div className="bg-foreground-dark text-text-dark bg-opacity-80 space-y-2 p-2 rounded mt-4">
+    <div className="bg-foreground-dark bottom-50 text-text-dark bg-opacity-80 space-y-2 p-2 rounded mt-4">
       <div className="grid grid-cols-3 gap-4">
         <p className="col-span-2 col-start-1">Booking fee</p>
         <div className="grid grid-cols-3 place-items-end gap-1">

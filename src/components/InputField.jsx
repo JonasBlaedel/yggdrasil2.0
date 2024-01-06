@@ -16,7 +16,7 @@ function InputField({
     <>
       <label htmlFor={id} className="grid w-72">
         <input
-          className="mb-2 rounded-md py-4 pl-3 shadow-sm [grid-area:1/1] focus:ring-2 focus:ring-accent"
+          className=" rounded-md py-4 pl-3 shadow-sm [grid-area:1/1] focus:ring-2 focus:ring-accent"
           onFocus={() => setFocused(true)}
           onBlur={(e) => setFocused(e.target.value.trim() !== "")}
           onChange={() => setFocused(true)}
