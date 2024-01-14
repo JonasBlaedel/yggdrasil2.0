@@ -358,12 +358,7 @@ function Booking() {
                     headline="3-person tent"
                   />
                 </TentCard>
-                <div className="relative w-fit">
-                  {showError && (
-                    <p className=" absolute left-full top-0 ml-5 w-52 rounded-sm p-2 text-center text-sm text-danger ring-2 ring-danger">
-                      You must pick the same number of tents as tickets
-                    </p>
-                  )}
+                <div className=" col-span-2 space-y-4">
                   <BookingButton
                     onClick={() => {
                       if (totalValue === totalTentValue) {
@@ -378,6 +373,11 @@ function Booking() {
                   >
                     Continue
                   </BookingButton>
+                  {showError && (
+                    <p className=" rounded-sm p-2 text-center text-sm text-danger ring-2 ring-danger">
+                      You must pick the same number of tents as tickets
+                    </p>
+                  )}
                 </div>
               </FormGroup>
             )}
