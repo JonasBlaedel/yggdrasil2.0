@@ -6,6 +6,7 @@ import { useState } from "react";
 function WrapperSchedule({ ...props }) {
   const [day, setDay] = useState("mon");
   const [active, setActive] = useState("Monday");
+  const [activeBtn, setActiveBtn] = useState("btn1");
 
   const bands = [];
   for (const scene in props.schedule) {
@@ -44,6 +45,9 @@ function WrapperSchedule({ ...props }) {
               setDay={setDay}
               setActive={setActive}
               active={active}
+              index="btn1"
+              setActiveBtn={setActiveBtn}
+              activeBtn={activeBtn}
             />
 
             <Button
@@ -52,6 +56,9 @@ function WrapperSchedule({ ...props }) {
               setDay={setDay}
               setActive={setActive}
               active={active}
+              index="btn2"
+              setActiveBtn={setActiveBtn}
+              activeBtn={activeBtn}
             />
 
             <Button
@@ -60,6 +67,9 @@ function WrapperSchedule({ ...props }) {
               setDay={setDay}
               setActive={setActive}
               active={active}
+              index="btn3"
+              setActiveBtn={setActiveBtn}
+              activeBtn={activeBtn}
             />
 
             <Button
@@ -68,6 +78,9 @@ function WrapperSchedule({ ...props }) {
               setDay={setDay}
               setActive={setActive}
               active={active}
+              index="btn4"
+              setActiveBtn={setActiveBtn}
+              activeBtn={activeBtn}
             />
 
             <Button
@@ -76,6 +89,9 @@ function WrapperSchedule({ ...props }) {
               setDay={setDay}
               setActive={setActive}
               active={active}
+              index="btn5"
+              setActiveBtn={setActiveBtn}
+              activeBtn={activeBtn}
             />
 
             <Button
@@ -84,6 +100,9 @@ function WrapperSchedule({ ...props }) {
               setDay={setDay}
               setActive={setActive}
               active={active}
+              index="btn6"
+              setActiveBtn={setActiveBtn}
+              activeBtn={activeBtn}
             />
 
             <Button
@@ -92,6 +111,9 @@ function WrapperSchedule({ ...props }) {
               setDay={setDay}
               setActive={setActive}
               active={active}
+              index="btn7"
+              setActiveBtn={setActiveBtn}
+              activeBtn={activeBtn}
             />
           </div>
         </div>
